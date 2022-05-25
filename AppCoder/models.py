@@ -1,6 +1,6 @@
 from django.db import models
 
-class Productor(models.Model):
+class Productores(models.Model):
     nombre=models.CharField(max_length=255)
     apellido=models.CharField(max_length=255)
     email=models.EmailField()
@@ -8,13 +8,11 @@ class Productor(models.Model):
     descripcion=models.TextField()
     cultivo=models.CharField(max_length=255)
 
-    class Meta():
-        verbose_name='Productors'
-        verbose_name_plural='Productores'
+    class Meta:
+        verbose_name = "Productores"
+        verbose_name_plural = "Productores"
 
-
-
-class AsesorTecnico(models.Model):
+class AsesoresTecnicos(models.Model):
     nombre=models.CharField(max_length=255)
     apellido=models.CharField(max_length=255)
     email=models.EmailField()
@@ -22,7 +20,11 @@ class AsesorTecnico(models.Model):
     descripcion=models.TextField()
     cultivo=models.CharField(max_length=255)
 
-class AgroComercio(models.Model):
+    class Meta:
+        verbose_name = "Asesores Tecnicos"
+        verbose_name_plural = "Asesores Tecnicos"
+
+class AgroComercios(models.Model):
     nombre=models.CharField(max_length=255)
     razonSocial=models.CharField(max_length=255)
     email=models.EmailField()
@@ -30,3 +32,7 @@ class AgroComercio(models.Model):
     direccion=models.CharField(max_length=255)
     descripcion=models.TextField()
     cultivo=models.CharField(max_length=255)
+
+    class Meta:
+        verbose_name = "Agro Comercios"
+        verbose_name_plural = "Agro Comercios" 

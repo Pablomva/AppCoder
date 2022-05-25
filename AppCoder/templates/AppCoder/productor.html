@@ -6,4 +6,28 @@
 
 <h1>Bievenido a productor agropecuario, disfrute de esta pagina</h1>
 
+
+{% endblock %} 
+
+{% block contenidoModificable2 %}
+
+{% if form.errors %}
+    
+<p style='color: red'> Datos incorrectos </p>
+
+{% endif %}
+ 
+<form action="" method="POST"> {% csrf_token %}
+
+<table>
+
+        {{form.as_table}}
+
+</table>
+
+<input type="submit" value="Enviar">
+
+
+</form>
+
 {% endblock %} 
